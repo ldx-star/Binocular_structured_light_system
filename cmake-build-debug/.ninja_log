@@ -1,0 +1,9 @@
+# ninja log v5
+1804	1971	1687952380818068431	Binocular_structured_light_system	4d16e58bb67be216
+1	1994	1687951110369346527	CMakeFiles/Binocular_structured_light_system.dir/Camera.cpp.o	e0f899919d0864a4
+1	1919	1687951110293345927	CMakeFiles/Binocular_structured_light_system.dir/utils.cpp.o	fad63d955e4ed432
+1	1804	1687952380654066632	CMakeFiles/Binocular_structured_light_system.dir/main.cpp.o	4a428d2f709384e9
+1	2032	1687952400346282786	CMakeFiles/Binocular_structured_light_system.dir/main.cpp.o	4a428d2f709384e9
+2033	2173	1687952400486284324	Binocular_structured_light_system	4d16e58bb67be216
+0	1869	1687952480579165505	CMakeFiles/Binocular_structured_light_system.dir/main.cpp.o	4a428d2f709384e9
+1869	2007	1687952480715167004	Binocular_structured_light_system	4d16e58bb67be216
