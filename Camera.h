@@ -10,37 +10,36 @@
 
 class Camera {
 public:
-    std::vector<std::vector<cv::Point2f>> all_centersL_xy_;//所有左相机图像的圆心像素坐标
-    std::vector<std::vector<cv::Point2f>> all_centersR_xy_;//所有右相机图像的圆心像素坐标
+    int img_counts_; //图片数量
+    std::string board_imagePath_; // 棋盘格图像路径
+    std::string camera_param_path_; // 参数路径
+    std::string camera_param_file_; // 参数文件
 
-    cv::Size imgSize;       // 图像大小 1280x720
-    cv::Size patSize;       // 棋盘格 cols x rows
-    double squareSize;  // 方格尺寸 5.f
-    cv::Mat M_L, M_R;       // 内参矩阵(左/右)
-    cv::Mat D_L, D_R;       // 畸变系数(左/右)
-    std::vector<cv::Mat> rvecs_L, rvecs_R;  // 旋转矩阵(左/右)
-    std::vector<cv::Mat> tvecs_L, tvecs_R;  // 平移矩阵(左/右)
-    double error_L = 0., error_R = 0.; // 标定误差(单目)
-
-    cv::Mat R, T;          // 旋转矩阵（R）+矩阵（T）
-    cv::Mat E, F;          // 本质矩阵（）
-    double error_LR = 0.;  // 标定误差（双目）
-
-public:
-    std::string board_imagePath_;
-    int Board_row_; // 棋盘格行数
-    int Board_col_; // 棋盘格列数
+    cv::Size patSize_;       // 棋盘格 cols x rows
+    cv::Size imgSize_;       // 图像 cols x rows
     float Board_square_; // 单个棋盘格的大小
-    std::string cameraL_param_path_; // 左相机参数路径
-    std::string cameraR_param_path_; // 右相机参数路径
+
+
+    cv::Mat M_L_, M_R_;       // 内参矩阵(左/右)
+    cv::Mat D_L_, D_R_;       // 畸变系数(左/右)
+    std::vector<cv::Mat> rotation_L_, rotation_R_;  // 旋转矩阵(左/右)
+    std::vector<cv::Mat> translation_L_, translation_R_;  // 平移矩阵(左/右)
+
+    double error_L_, error_R_; // 左/右相机重投影误差
+    double error_LR_; // 立体标定重投影误差
+
+    cv::Mat R_, T_;          // 旋转矩阵，平移矩阵
+    cv::Mat E_, F_;          // 本质矩阵，基础矩阵
+
 public:
     Camera() = default;
     ~Camera() = default;
     //相机标定
     void Camera_Calibrate();
-    //立体标定
-    void Stereo_Calibrate();
-
+    //打印标定信息
+    void printInfo();
+    //保存参数
+    void save_params();
     //加载相机参数
     void load_params();
 };

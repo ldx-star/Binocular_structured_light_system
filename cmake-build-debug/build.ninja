@@ -51,21 +51,21 @@ build cmake_object_order_depends_target_Binocular_structured_light_system: phony
 
 build CMakeFiles/Binocular_structured_light_system.dir/main.cpp.o: CXX_COMPILER__Binocular_structured_light_system_Debug /media/liangdaxin/sd1/Binocular_structured_light_system/main.cpp || cmake_object_order_depends_target_Binocular_structured_light_system
   DEP_FILE = CMakeFiles/Binocular_structured_light_system.dir/main.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++17
   INCLUDES = -isystem /usr/local/include/opencv4
   OBJECT_DIR = CMakeFiles/Binocular_structured_light_system.dir
   OBJECT_FILE_DIR = CMakeFiles/Binocular_structured_light_system.dir
 
 build CMakeFiles/Binocular_structured_light_system.dir/Camera.cpp.o: CXX_COMPILER__Binocular_structured_light_system_Debug /media/liangdaxin/sd1/Binocular_structured_light_system/Camera.cpp || cmake_object_order_depends_target_Binocular_structured_light_system
   DEP_FILE = CMakeFiles/Binocular_structured_light_system.dir/Camera.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++17
   INCLUDES = -isystem /usr/local/include/opencv4
   OBJECT_DIR = CMakeFiles/Binocular_structured_light_system.dir
   OBJECT_FILE_DIR = CMakeFiles/Binocular_structured_light_system.dir
 
 build CMakeFiles/Binocular_structured_light_system.dir/utils.cpp.o: CXX_COMPILER__Binocular_structured_light_system_Debug /media/liangdaxin/sd1/Binocular_structured_light_system/utils.cpp || cmake_object_order_depends_target_Binocular_structured_light_system
   DEP_FILE = CMakeFiles/Binocular_structured_light_system.dir/utils.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++17
   INCLUDES = -isystem /usr/local/include/opencv4
   OBJECT_DIR = CMakeFiles/Binocular_structured_light_system.dir
   OBJECT_FILE_DIR = CMakeFiles/Binocular_structured_light_system.dir

@@ -13,10 +13,12 @@ public:
     std::string board_imagePath;// 棋盘格路径
     int Board_row; // 棋盘行数
     int Board_col; // 棋盘列数
+    int img_row; // 图像行数
+    int img_col; // 图像列数
     float Board_square; // 单个棋盘格的大小
-
-    std::string cameraL_param_path; // 左相机参数路径
-    std::string cameraR_param_path; // 右相机参数路径
+    int img_counts; //图片数量
+    std::string camera_param_path; // 相机参数路径
+    std::string params_fileName; // 参数文件名
 
 
 };
